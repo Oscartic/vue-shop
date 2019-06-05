@@ -10,7 +10,7 @@
         <b-button
             block 
             variant="warning"
-            @click="$emmit('addToCart', product)"
+            @click="$emit('addToCart', product)"
         >
             Añadir al carrito
         </b-button>

@@ -14,7 +14,7 @@
                 ></product-item>
             </b-card-group>
        </paginate>
-       
+
        <paginate-links 
             for="products"
             :classes="{
@@ -50,9 +50,10 @@ export default {
     },
     methods: {
         ...mapActions('products', ['fetchProducts']),
+        ...mapMutations('cart', ['addProduct']),
         addProductToCart (product){
-
-        }
+            this.addProduct(product)
+        }   
     }
 }
 </script>
